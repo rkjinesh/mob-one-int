@@ -1,0 +1,259 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+h1{
+    font-size: 28px;
+    color: #fff;
+}
+.header{
+    position:sticky;
+    top:0px;
+    left:0px;
+    z-index:99;
+    width: 100%;
+    background-color: #0FDADA;
+    margin: 0px;
+}
+.header-items{
+    padding:30px 50px;
+}
+
+.headericons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.headericons span{
+   padding-left: 50px;
+   color: #fff;
+   cursor: pointer;
+}
+
+
+@media (max-width:380px)  { 
+    .headericons{
+        display: block;
+    }
+
+    .priceperBottle p{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header-items{
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+        
+    }
+    .col-4, .col-8,.col-5,.col-3{
+        width: 100%;
+    }
+    .col-4{
+        text-align: center;
+    }
+}
+    
+hr{
+    margin: 0px;
+    color: rgb(132, 137, 139);
+    padding-bottom: 20px;
+}
+
+.display-amount {
+margin: 0px;
+align-items: center;
+padding: 10px 50px;
+color:#979FA0; ;
+}
+
+.display-amount p{
+    font-size: 20px;
+}
+
+.greenText span{
+color: #0FDADA;
+font-weight: bold;
+}
+
+@media (max-width:380px)  { 
+    .display-amount p{
+        font-size: 17px;
+    }
+}
+
+.product-info{
+    background-color: #EBF3F5;
+    padding-bottom: 20px;
+    
+}
+
+
+.product-info-container{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.product-image img{
+    position: relative;
+    max-width: 100% ;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.product-details p{
+    font-size: 22px;
+    color: #979FA0;
+    font-weight:600;
+    
+
+}
+
+.product-details span{
+    font-size: 20px;
+    color: #979FA0;
+    line-height: 0px;
+
+}
+
+.priceperBottle p{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 90%;
+    font-size: 20px;
+    color: #0FDADA;
+    font-weight: bold;
+}
+
+
+@media (max-width:481px)  { 
+    .product-details p{
+        font-size: 17px;
+    }
+
+    .product-details span{
+        font-size: 13px;    
+    }  
+    .product-details p{
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width:380px)  { 
+
+    .product-image img{
+        margin-bottom: 20px;
+    }
+    .product-details p{
+        font-size: 17px;
+       line-height: 30px;
+    }
+
+    .product-details span{
+        font-size: 13px;    
+    } 
+   
+}
+
+
+form {
+    padding-top: 20px;
+}
+
+label{
+    font-size: 13px;
+    font-weight: bold;
+    color:#979FA0;
+    padding-bottom: 6px;
+}
+
+
+
+/* Styling gallery section where all images are */
+  .gallery {
+    width: 90%;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-content:center;
+    align-items: center; 
+  }
+ 
+  /* Styling Particular Image */
+  .gallery-img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  /* onHover image will expand little bit */
+  .gallery-img:hover {
+    transform: scale(1.1);
+    cursor: zoom-in;
+  }
+  /* This section will be seen when we click on image */
+  .image-popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+  }
+ 
+  /* close button when we want to close the bigger image */
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    font-size:60px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .close-button:hover{
+    color: red;
+  }
+ 
+  /* when we click on the image ,it will expand in bigger size and will displayed 
+at middle of screen */
+  #popupImage {
+    display: block;
+    max-width: 70%;
+    max-height: 70%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+ 
+  /* Making images more responsive for smaller size device */
+  @media (max-width:670px) {
+    .gallery{
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 10px;
+    }
+    .gallery-img{
+        width:150px;
+        height: 150px;
+    }
+ 
+    .heading{
+        font-size: 20px;
+    }
+    .image-popup-container{
+        z-index: 9999;
+    }
+  }
